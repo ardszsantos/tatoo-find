@@ -1,33 +1,42 @@
+/* Grid container para as imagens */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  /* 7 columns */
+  /* 7 colunas */
   grid-template-rows: repeat(3, 1fr);
-  /* 3 rows */
+  /* 3 linhas */
   gap: 1px;
-  /* Space between grid items */
+  /* Espaço entre os itens do grid */
   height: 80vh;
-  /* Adjusts grid to take up 80% of the viewport height */
+  /* O grid ocupa 80% da altura da tela */
   margin-top: 10px;
   overflow-y: auto;
-  /* Ensure grid can scroll if needed */
+  /* Permite rolagem caso necessário */
 }
 
+/* Estilo dos itens do grid */
 .grid-item {
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
   min-height: 200px;
-  /* Ensuring all grid items have a minimum height */
+  overflow: hidden;
+  /* Para garantir que imagens grandes não quebrem o layout */
 }
 
+/* Estilo para as imagens no grid */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Assegura que a imagem preencha o grid sem distorção */
+}
+
+/* Estilo para o elemento de carregamento */
 .loading {
   grid-column: span 7;
-  /* Span across all 7 columns */
+  /* O item de carregamento ocupa todas as 7 colunas */
   text-align: center;
   padding: 20px;
   font-size: 16px;
