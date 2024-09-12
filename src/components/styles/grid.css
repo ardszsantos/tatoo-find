@@ -1,0 +1,35 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* 7 columns */
+  grid-template-rows: repeat(3, 1fr);
+  /* 3 rows */
+  gap: 1px;
+  /* Space between grid items */
+  height: 80vh;
+  /* Adjusts grid to take up 80% of the viewport height */
+  margin-top: 10px;
+  overflow-y: auto;
+  /* Ensure grid can scroll if needed */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  min-height: 200px;
+  /* Ensuring all grid items have a minimum height */
+}
+
+.loading {
+  grid-column: span 7;
+  /* Span across all 7 columns */
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #888;
+}
